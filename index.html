@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siyi Zhu | Statistics & Data Analyst</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+            --card-bg: #fff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #bdc3c7;
+            margin-top: 0.5rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .project-card {
+            border: 1px solid #e1e4e8;
+            padding: 1.2rem;
+            border-radius: 6px;
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: var(--accent-color);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .contact-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Siyi Zhu</h1>
+        <p>BSc (Hons) Statistics Graduate | Data & Financial Analyst</p>
+        <div class="contact-links" style="margin-top: 1rem;">
+            <a href="mailto:siyizhu0718@gmail.com">Email</a> | 
+            <a href="https://www.linkedin.com/in/siyi-z-654089204/" target="_blank">LinkedIn</a> | 
+            <a href="https://github.com/cyee718" target="_blank">GitHub</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- About Section -->
+        <section>
+            <h2>About Me</h2>
+            <p>I bring a top-tier quantitative foundation with a BSc (Hons) Statistics from the University of Glasgow, featuring distinctions in advanced data analysis, enhanced by an advanced modeling exchange at the University of Hong Kong[cite: 1]. Combining technical expertise in data pipelines, predictive analytics, and economic modeling with hands-on investment and financial analysis experience[cite: 1], I am driven to deliver impactful insights within the analyst sector.</p>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section>
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <h3>UAE's Performance Analysis</h3>
+                    <p>A comprehensive macro-level economic analysis tracking UAE's GDP diversification, trade openness, and social development indicators from historical data.</p>
+                    <a href="https://cyee718.github.io/uae-analysis/" target="_blank" class="btn">View Live Project</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>NDNS Alcohol Consumption</h3>
+                    <p>Engineered data pipelines, performed exploratory data analysis, and implemented a two-part Hurdle Model for predictive modeling on large datasets[cite: 1].</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Cumbria Housing Valuation</h3>
+                    <p>Developed a predictive model for real estate trends by executing an end-to-end data cleaning and feature selection workflow[cite: 1].</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Experience & Education Summary -->
+        <section>
+            <h2>Background Overview</h2>
+            <ul>
+                <li><strong>Education:</strong> BSc (Hons) Statistics, University of Glasgow[cite: 1] | Exchange at University of Hong Kong (Advanced Modeling)[cite: 1]</li>
+                <li><strong>Investment Experience:</strong> Investment Analyst Intern at Zeke Venture Capital (Factor research, P/FCF, EV/EBITDA, startup financial metrics)[cite: 1]</li>
+                <li><strong>Technical Skills:</strong> R, Python, SAS, Excel, Data Pipelines, Predictive Modeling, Financial Analysis[cite: 1]</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Siyi Zhu. Built with clean code & hosted via GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
