@@ -60,7 +60,7 @@
             overflow: hidden;
         }
 
-        /* Background image container for scroll blur effect */
+        /* Background image container updated to dubai.jpg */
         .header-bg {
             position: absolute;
             top: 0;
@@ -595,7 +595,6 @@
         window.addEventListener('scroll', function() {
             const scrollPos = window.scrollY;
             const headerBg = document.getElementById('headerBg');
-            // Max blur capped at 8px as you scroll down
             const blurAmount = Math.min(scrollPos / 30, 8);
             headerBg.style.filter = `blur(${blurAmount}px)`;
         });
@@ -906,7 +905,7 @@
             document.getElementById('proj-desc-2').innerHTML = t.projDesc2;
             document.getElementById('proj-btn-2').innerText = t.projBtn2;
 
-            document.getElementById('proj-title-3').innerHTML = t.projTitle3;
+            document.getElementById('proj-title-3').innerText = t.projTitle3;
             document.getElementById('proj-desc-3').innerHTML = t.projDesc3;
             document.getElementById('proj-btn-3').innerText = t.projBtn3;
 
