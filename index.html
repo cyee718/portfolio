@@ -24,9 +24,10 @@
         }
 
         .lang-switcher-container {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
+            display: flex;
+            justify-content: flex-end;
+            padding: 1rem 1.5rem 0;
+            position: relative;
             z-index: 100;
         }
 
@@ -55,7 +56,7 @@
         header {
             position: relative;
             text-align: center;
-            padding: 5rem 1rem 4rem;
+            padding: 2rem 1rem 4rem;
             color: white;
             overflow: hidden;
         }
@@ -405,16 +406,16 @@
 </head>
 <body>
 
+    <div class="lang-switcher-container">
+        <select id="langSelect" class="lang-select" onchange="switchLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="ar">العربية (الإمارات)</option>
+        </select>
+    </div>
+
     <header>
         <div class="header-bg" id="headerBg"></div>
         <div class="header-overlay"></div>
-
-        <div class="lang-switcher-container">
-            <select id="langSelect" class="lang-select" onchange="switchLanguage(this.value)">
-                <option value="en">English</option>
-                <option value="ar">العربية (الإمارات)</option>
-            </select>
-        </div>
 
         <img src="profile/Siyi_Zhu_Linkedin_PFP.jpeg" alt="Siyi Zhu" class="profile-img">
         <h1 id="header-name">Siyi Zhu</h1>
@@ -905,7 +906,7 @@
             document.getElementById('proj-desc-2').innerHTML = t.projDesc2;
             document.getElementById('proj-btn-2').innerText = t.projBtn2;
 
-            document.getElementById('proj-title-3').innerText = t.projTitle3;
+            document.getElementById('proj-title-3').innerHTML = t.projTitle3;
             document.getElementById('proj-desc-3').innerHTML = t.projDesc3;
             document.getElementById('proj-btn-3').innerText = t.projBtn3;
 
