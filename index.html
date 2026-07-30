@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siyi Zhu | Statistics & Data Analyst</title>
+    <title id="page-title">Siyi Zhu | Statistics & Data Analyst</title>
     <style>
         :root {
             --primary: #1e293b;
@@ -21,6 +21,36 @@
             background-color: var(--bg);
             margin: 0;
             padding: 0;
+        }
+
+        /* Language Switcher Styling */
+        .lang-switcher-container {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            z-index: 100;
+        }
+
+        .lang-select {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            outline: none;
+            transition: background 0.2s;
+        }
+
+        .lang-select option {
+            background: #1e293b;
+            color: white;
+        }
+
+        .lang-select:hover {
+            background: rgba(255, 255, 255, 0.25);
         }
 
         header {
@@ -183,6 +213,38 @@
             font-size: 0.95rem;
         }
 
+        .experience-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience-item h3 {
+            margin: 0 0 0.25rem 0;
+            color: var(--primary);
+            font-size: 1.15rem;
+        }
+
+        .experience-meta {
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-item ul {
+            padding-left: 1.2rem;
+            margin: 0.5rem 0 0 0;
+            color: var(--text-light);
+        }
+
+        .experience-item li {
+            margin-bottom: 0.3rem;
+            font-size: 0.95rem;
+        }
+
         .btn {
             display: inline-block;
             background-color: var(--accent);
@@ -244,56 +306,63 @@
 <body>
 
     <header>
+        <div class="lang-switcher-container">
+            <select id="langSelect" class="lang-select" onchange="switchLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="ar">العربية (الإمارات)</option>
+            </select>
+        </div>
+
         <img src="profile/Siyi_Zhu_Linkedin_PFP.jpeg" alt="Siyi Zhu" class="profile-img">
-        <h1>Siyi Zhu</h1>
-        <p>BSc (Hons) Statistics Graduate | Data & Financial Analyst</p>
+        <h1 id="header-name">Siyi Zhu</h1>
+        <p id="header-subtitle">BSc (Hons) Statistics Graduate | Data & Financial Analyst</p>
         <div>
-            <span class="residency-badge">UAE Resident (Family Sponsor)</span>
+            <span class="residency-badge" id="badge-residency">UAE Resident (Family Sponsor)</span>
         </div>
         <div class="contact-links" style="margin-top: 1.2rem;">
-            <a href="mailto:siyizhu0718@gmail.com">Email</a> | 
-            <a href="https://www.linkedin.com/in/siyi-z-654089204/" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/cyee718" target="_blank">GitHub</a>
+            <a href="mailto:siyizhu0718@gmail.com" id="link-email">Email</a> | 
+            <a href="https://www.linkedin.com/in/siyi-z-654089204/" target="_blank" id="link-linkedin">LinkedIn</a> | 
+            <a href="https://github.com/cyee718" target="_blank" id="link-github">GitHub</a>
         </div>
     </header>
 
     <div class="container">
         
         <div class="card">
-            <h2>About Me</h2>
-            <p>I bring a solid quantitative foundation with a BSc (Hons) Statistics from the University of Glasgow, featuring distinctions in advanced data analysis, enhanced by an advanced modeling exchange at the University of Hong Kong. As a UAE resident with extensive international background, and combining technical expertise in data pipelines, predictive analytics, and economic modeling with hands-on investment and financial analysis experience, I am driven to deliver impactful insights within the analyst sector.</p>
+            <h2 id="about-heading">About Me</h2>
+            <p id="about-text">I bring a solid quantitative foundation with a BSc (Hons) Statistics from the University of Glasgow, featuring distinctions in advanced data analysis, enhanced by an advanced modeling exchange at the University of Hong Kong. As a UAE resident with extensive international background, and combining technical expertise in data pipelines, predictive analytics, and economic modeling with hands-on investment and financial analysis experience, I am driven to deliver impactful insights within the analyst sector.</p>
         </div>
 
         <div class="card">
-            <h2>Education & Academic Background</h2>
+            <h2 id="edu-heading">Education & Academic Background</h2>
             <div class="education-grid">
                 
                 <div class="edu-card">
                     <img src="profile/Choueifat.JPG" alt="The International School of Choueifat - Dubai" class="edu-img">
                     <div class="edu-content">
-                        <span class="edu-badge">High School</span>
-                        <h3>The International School of Choueifat - Dubai</h3>
-                        <p style="margin-top: 0.5rem; color: var(--text-light);">Completed continuous primary to high school grounding in Dubai.</p>
+                        <span class="edu-badge" id="edu-badge-1">High School</span>
+                        <h3 id="edu-title-1">The International School of Choueifat - Dubai</h3>
+                        <p id="edu-desc-1" style="margin-top: 0.5rem; color: var(--text-light);">Completed continuous primary to high school grounding in Dubai.</p>
                     </div>
                 </div>
 
                 <div class="edu-card">
                     <img src="profile/Glasgow.JPG" alt="University of Glasgow" class="edu-img">
                     <div class="edu-content">
-                        <span class="edu-badge">Bachelor's</span>
-                        <h3>University of Glasgow</h3>
-                        <p><strong>BSc (Hons) Statistics</strong></p>
-                        <p style="margin-top: 0.5rem; color: var(--text-light);">Rigorous training in mathematical statistics, data science pipelines, and quantitative research.</p>
+                        <span class="edu-badge" id="edu-badge-2">Bachelor's</span>
+                        <h3 id="edu-title-2">University of Glasgow</h3>
+                        <p><strong id="edu-sub-2">BSc (Hons) Statistics</strong></p>
+                        <p id="edu-desc-2" style="margin-top: 0.5rem; color: var(--text-light);">Rigorous training in mathematical statistics, data science pipelines, and quantitative research.</p>
                     </div>
                 </div>
 
                 <div class="edu-card">
                     <img src="profile/HKU.jpg" alt="University of Hong Kong" class="edu-img">
                     <div class="edu-content">
-                        <span class="edu-badge">Faculty Exchange</span>
-                        <h3>University of Hong Kong</h3>
-                        <p><strong>Advanced Modeling Exchange Program</strong></p>
-                        <p style="margin-top: 0.5rem; color: var(--text-light);">Specialized coursework focusing on advanced statistical modeling and complex data systems.</p>
+                        <span class="edu-badge" id="edu-badge-3">Faculty Exchange</span>
+                        <h3 id="edu-title-3">University of Hong Kong</h3>
+                        <p><strong id="edu-sub-3">Advanced Modeling Exchange Program</strong></p>
+                        <p id="edu-desc-3" style="margin-top: 0.5rem; color: var(--text-light);">Specialized coursework focusing on advanced statistical modeling and complex data systems.</p>
                     </div>
                 </div>
 
@@ -301,65 +370,245 @@
         </div>
 
         <div class="card">
-            <h2>Featured Projects</h2>
+            <h2 id="exp-heading">Experience</h2>
+            
+            <div class="experience-item">
+                <h3 id="exp-title-1">Investment Analyst Intern</h3>
+                <div class="experience-meta">Zeke Venture Capital</div>
+                <ul>
+                    <li id="exp-li-1">Conducted factor research and evaluated startup financial metrics using valuation frameworks like P/FCF and EV/EBITDA.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 id="projects-heading">Featured Projects</h2>
             <div class="projects-grid">
                 
                 <div class="project-card">
                     <div>
                         <img src="profile/uaeanalysis.png" alt="UAE Analysis Preview" class="project-img">
                         <div class="project-content">
-                            <h3>UAE's Performance Analysis</h3>
-                            <p>A comprehensive macro-level economic analysis tracking UAE's GDP diversification, trade openness, and social development indicators from historical data.</p>
+                            <h3 id="proj-title-1">UAE's Performance Analysis</h3>
+                            <p id="proj-desc-1">A comprehensive macro-level economic analysis tracking UAE's GDP diversification, trade openness, and social development indicators from historical data.</p>
                         </div>
                     </div>
-                    <a href="https://cyee718.github.io/uae-analysis/" target="_blank" class="btn">View Live Project</a>
+                    <a href="https://cyee718.github.io/uae-analysis/" target="_blank" class="btn" id="proj-btn-1">View Live Project</a>
                 </div>
 
                 <div class="project-card">
                     <div>
                         <img src="profile/ndns-alcohol.png" alt="Dissertation Preview" class="project-img">
                         <div class="project-content">
-                            <h3>NDNS Alcohol Consumption</h3>
-                            <p>Engineered data pipelines, performed exploratory data analysis, and implemented a two-part Hurdle Model for predictive modeling on large datasets.</p>
+                            <h3 id="proj-title-2">NDNS Alcohol Consumption</h3>
+                            <p id="proj-desc-2">Engineered data pipelines, performed exploratory data analysis, and implemented a two-part Hurdle Model for predictive modeling on large datasets.</p>
                         </div>
                     </div>
-                    <a href="https://github.com/cyee718/-Dissertation-Factors-affecting-Alcohol-Intake/blob/main/dissertation.pdf" target="_blank" class="btn">View Dissertation PDF</a>
+                    <a href="https://github.com/cyee718/-Dissertation-Factors-affecting-Alcohol-Intake/blob/main/dissertation.pdf" target="_blank" class="btn" id="proj-btn-2">View Dissertation PDF</a>
                 </div>
 
                 <div class="project-card">
                     <div>
                         <img src="profile/cumbria.png" alt="Cumbria Poster Preview" class="project-img">
                         <div class="project-content">
-                            <h3>Cumbria Housing Valuation</h3>
-                            <p>Developed a predictive model for real estate trends by executing an end-to-end data cleaning and feature selection workflow.</p>
+                            <h3 id="proj-title-3">Cumbria Housing Valuation</h3>
+                            <p id="proj-desc-3">Developed a predictive model for real estate trends by executing an end-to-end data cleaning and feature selection workflow.</p>
                         </div>
                     </div>
-                    <a href="https://github.com/cyee718/Housing-Prices-in-Cumbria/blob/main/Cumbria%20Poster.pdf" target="_blank" class="btn">View Cumbria Poster</a>
+                    <a href="https://github.com/cyee718/Housing-Prices-in-Cumbria/blob/main/Cumbria%20Poster.pdf" target="_blank" class="btn" id="proj-btn-3">View Cumbria Poster</a>
                 </div>
 
             </div>
         </div>
 
         <div class="card">
-            <h2>Skills & Experience</h2>
-            <p><strong>Investment Experience:</strong> Investment Analyst Intern at Zeke Venture Capital (Factor research, P/FCF, EV/EBITDA, startup financial metrics)</p>
-            <p style="margin-top: 1rem;"><strong>Core Technical Skills:</strong></p>
+            <h2 id="skills-heading">Skills & Languages</h2>
+            <p style="margin-top: 0;"><strong id="skills-sub-1">Core Technical Skills:</strong></p>
             <ul class="skills-list">
                 <li>R</li>
                 <li>Python</li>
                 <li>SAS</li>
                 <li>Excel</li>
-                <li>Data Pipelines</li>
-                <li>Predictive Modeling</li>
-                <li>Financial Analysis</li>
+                <li id="skill-datapipelines">Data Pipelines</li>
+                <li id="skill-predictive">Predictive Modeling</li>
+                <li id="skill-financial">Financial Analysis</li>
+            </ul>
+
+            <p style="margin-top: 1.5rem;"><strong id="skills-sub-2">Languages:</strong></p>
+            <ul class="skills-list">
+                <li id="lang-1">English (Native)</li>
+                <li id="lang-2">Mandarin Chinese (Native)</li>
+                <li id="lang-3">French (DELF B1)</li>
             </ul>
         </div>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 Siyi Zhu. Built with clean code & hosted via GitHub Pages.</p>
+        <p id="footer-text">&copy; 2026 Siyi Zhu. Built with clean code & hosted via GitHub Pages.</p>
     </footer>
 
+    <script>
+        const translations = {
+            en: {
+                pageTitle: "Siyi Zhu | Statistics & Data Analyst",
+                subtitle: "BSc (Hons) Statistics Graduate | Data & Financial Analyst",
+                residency: "UAE Resident (Family Sponsor)",
+                email: "Email",
+                linkedin: "LinkedIn",
+                github: "GitHub",
+                aboutHeading: "About Me",
+                aboutText: "I bring a solid quantitative foundation with a BSc (Hons) Statistics from the University of Glasgow, featuring distinctions in advanced data analysis, enhanced by an advanced modeling exchange at the University of Hong Kong. As a UAE resident with extensive international background, and combining technical expertise in data pipelines, predictive analytics, and economic modeling with hands-on investment and financial analysis experience, I am driven to deliver impactful insights within the analyst sector.",
+                eduHeading: "Education & Academic Background",
+                eduBadge1: "High School",
+                eduTitle1: "The International School of Choueifat - Dubai",
+                eduDesc1: "Completed continuous primary to high school grounding in Dubai.",
+                eduBadge2: "Bachelor's",
+                eduTitle2: "University of Glasgow",
+                eduSub2: "BSc (Hons) Statistics",
+                eduDesc2: "Rigorous training in mathematical statistics, data science pipelines, and quantitative research.",
+                eduBadge3: "Faculty Exchange",
+                eduTitle3: "University of Hong Kong",
+                eduSub3: "Advanced Modeling Exchange Program",
+                eduDesc3: "Specialized coursework focusing on advanced statistical modeling and complex data systems.",
+                expHeading: "Experience",
+                expTitle1: "Investment Analyst Intern",
+                expLi1: "Conducted factor research and evaluated startup financial metrics using valuation frameworks like P/FCF and EV/EBITDA.",
+                projectsHeading: "Featured Projects",
+                projTitle1: "UAE's Performance Analysis",
+                projDesc1: "A comprehensive macro-level economic analysis tracking UAE's GDP diversification, trade openness, and social development indicators from historical data.",
+                projBtn1: "View Live Project",
+                projTitle2: "NDNS Alcohol Consumption",
+                projDesc2: "Engineered data pipelines, performed exploratory data analysis, and implemented a two-part Hurdle Model for predictive modeling on large datasets.",
+                projBtn2: "View Dissertation PDF",
+                projTitle3: "Cumbria Housing Valuation",
+                projDesc3: "Developed a predictive model for real estate trends by executing an end-to-end data cleaning and feature selection workflow.",
+                projBtn3: "View Cumbria Poster",
+                skillsHeading: "Skills & Languages",
+                skillsSub1: "Core Technical Skills:",
+                skillPipelines: "Data Pipelines",
+                skillPredictive: "Predictive Modeling",
+                skillFinancial: "Financial Analysis",
+                skillsSub2: "Languages:",
+                lang1: "English (Native)",
+                lang2: "Mandarin Chinese (Native)",
+                lang3: "French (DELF B1)",
+                footerText: "© 2026 Siyi Zhu. Built with clean code & hosted via GitHub Pages."
+            },
+            ar: {
+                pageTitle: "سيني تشو | محللة بيانات وإحصاء",
+                subtitle: "خريجة بكالوريوس (مع مرتبة الشرف) في الإحصاء | محللة بيانات ومستثمرة مالية",
+                residency: "مقيم في الإمارات (إقامة كفالة عائلة)",
+                email: "البريد الإلكتروني",
+                linkedin: "لينكد إن",
+                github: "جيت هب",
+                aboutHeading: "نبذة عني",
+                aboutText: "أمتلك أساساً كمياً متصلاً مع درجة البكالوريوس (مع مرتبة الشرف) في الإحصاء من جامعة غلاسكو، مع تميز في تحليلات البيانات المتقدمة، ومدعوماً بتبادل أكاديمي متقدم للنمذجة في جامعة هونغ كونغ. بصفتي مقيمة في دولة الإمارات العربية المتحدة مع خلفية دولية واسعة، وبدمج الخبرة التقنية في خطوط بيانات العمل، التحليلات التنبؤية، والنمذجة الاقتصادية مع خبرة عملية في الاستثمار والتحليل المالي, أسعى دائماً لتقديم رؤى مؤثرة ضمن قطاع التحليل.",
+                eduHeading: "التعليم والخلفية الأكاديمية",
+                eduBadge1: "المدرسة الثانوية",
+                eduTitle1: "مدرسة الشويفات الدولية - دبي",
+                eduDesc1: "أكملت التعليم المدرسي الأساسي والثانوي المستمر في دبي.",
+                eduBadge2: "درجة البكالوريوس",
+                eduTitle2: "جامعة غلاسكو",
+                eduSub2: "بكالوريوس إحصاء (مع مرتبة الشرف)",
+                eduDesc2: "تدريب صارم في الإحصاء الرياضي، خطوط أنابيب علم البيانات، والبحث الكمي.",
+                eduBadge3: "تبادل أكاديمي",
+                eduTitle3: "جامعة هونغ كونغ",
+                eduSub3: "برنامج تبادل النمذجة المتقدمة",
+                eduDesc3: "مقررات متخصصة تركز على النمذجة الإحصائية المتقدمة وأنظمة البيانات المعقدة.",
+                expHeading: "الخبرات العملية",
+                expTitle1: "متدربة محلل استثماري",
+                expLi1: "أجريت أبحاث العوامل وقيمت المقاييس المالية للشركات الناشئة باستخدام أطر التقييم مثل التدفقات النقدية الحرة والربحية.",
+                projectsHeading: "المشاريع المميزة",
+                projTitle1: "تحليل أداء دولة الإمارات",
+                projDesc1: "تحليل اقتصادي شامل على مستوى الاقتصاد الكلي لتتبع تنوع الناتج المحلي الإجمالي لدولة الإمارات والانفتاح التجاري ومؤشرات التنمية الاجتماعية من البيانات التاريخية.",
+                projBtn1: "عرض المشروع المباشر",
+                projTitle2: "استهلاك الكحول (NDNS)",
+                projDesc2: "هندسة خطوط أنابيب البيانات، وإجراء تحليل البيانات الاستكشافي، وتطبيق نموذج جزئي مزدوج للنمذجة التنبؤية على مجموعات البيانات الكبيرة.",
+                projBtn2: "عرض ملف الأطروحة (PDF)",
+                projTitle3: "تقييم أسعار الإسكان في كمبريا",
+                projDesc3: "تطوير نموذج تنبؤي لاتجاهات السوق العقاري عبر تنفيذ تنظيف البيانات من البداية لنهايتها وتدفق اختيار الميزات.",
+                projBtn3: "عرض ملصق كمبريا",
+                skillsHeading: "المهارات واللغات",
+                skillsSub1: "المهارات التقنية الأساسية:",
+                skillPipelines: "خطوط أنابيب البيانات",
+                skillPredictive: "النمذجة التنبؤية",
+                skillFinancial: "التحليل المالي",
+                skillsSub2: "اللغات:",
+                lang1: "الإنجليزية (اللغة الأم)",
+                lang2: "اللغة الصينية الماندرين (اللغة الأم)",
+                lang3: "الفرنسية (DELF B1)",
+                footerText: "© 2026 سيني تشو. بُنيت بشفرة نظيفة وتُضاف عبر صفحات جيت هب."
+            }
+        };
+
+        function switchLanguage(lang) {
+            const t = translations[lang];
+            const htmlRoot = document.getElementById('html-root');
+
+            if (lang === 'ar') {
+                htmlRoot.setAttribute('dir', 'rtl');
+                htmlRoot.setAttribute('lang', 'ar');
+            } else {
+                htmlRoot.setAttribute('dir', 'ltr');
+                htmlRoot.setAttribute('lang', 'en');
+            }
+
+            document.getElementById('page-title').innerText = t.pageTitle;
+            document.getElementById('header-name').innerText = "Siyi Zhu";
+            document.getElementById('header-subtitle').innerText = t.subtitle;
+            document.getElementById('badge-residency').innerText = t.residency;
+            document.getElementById('link-email').innerText = t.email;
+            document.getElementById('link-linkedin').innerText = t.linkedin;
+            document.getElementById('link-github').innerText = t.github;
+
+            document.getElementById('about-heading').innerText = t.aboutHeading;
+            document.getElementById('about-text').innerHTML = t.aboutText;
+
+            document.getElementById('edu-heading').innerText = t.eduHeading;
+            document.getElementById('edu-badge-1').innerText = t.eduBadge1;
+            document.getElementById('edu-title-1').innerText = t.eduTitle1;
+            document.getElementById('edu-desc-1').innerText = t.eduDesc1;
+
+            document.getElementById('edu-badge-2').innerText = t.eduBadge2;
+            document.getElementById('edu-title-2').innerText = t.eduTitle2;
+            document.getElementById('edu-sub-2').innerHTML = t.eduSub2;
+            document.getElementById('edu-desc-2').innerText = t.eduDesc2;
+
+            document.getElementById('edu-badge-3').innerText = t.eduBadge3;
+            document.getElementById('edu-title-3').innerText = t.eduTitle3;
+            document.getElementById('edu-sub-3').innerHTML = t.eduSub3;
+            document.getElementById('edu-desc-3').innerText = t.eduDesc3;
+
+            document.getElementById('exp-heading').innerText = t.expHeading;
+            document.getElementById('exp-title-1').innerText = t.expTitle1;
+            document.getElementById('exp-li-1').innerHTML = t.expLi1;
+
+            document.getElementById('projects-heading').innerText = t.projectsHeading;
+            document.getElementById('proj-title-1').innerText = t.projTitle1;
+            document.getElementById('proj-desc-1').innerText = t.projDesc1;
+            document.getElementById('proj-btn-1').innerText = t.projBtn1;
+
+            document.getElementById('proj-title-2').innerText = t.projTitle2;
+            document.getElementById('proj-desc-2').innerHTML = t.projDesc2;
+            document.getElementById('proj-btn-2').innerText = t.projBtn2;
+
+            document.getElementById('proj-title-3').innerText = t.projTitle3;
+            document.getElementById('proj-desc-3').innerHTML = t.projDesc3;
+            document.getElementById('proj-btn-3').innerText = t.projBtn3;
+
+            document.getElementById('skills-heading').innerText = t.skillsHeading;
+            document.getElementById('skills-sub-1').innerHTML = t.skillsSub1;
+            document.getElementById('skill-datapipelines').innerHTML = t.skillPipelines;
+            document.getElementById('skill-predictive').innerHTML = t.skillPredictive;
+            document.getElementById('skill-financial').innerHTML = t.skillFinancial;
+            document.getElementById('skills-sub-2').innerText = t.skillsSub2;
+            document.getElementById('lang-1').innerText = t.lang1;
+            document.getElementById('lang-2').innerText = t.lang2;
+            document.getElementById('lang-3').innerText = t.lang3;
+
+            document.getElementById('footer-text').innerText = t.footerText;
+        }
+    </script>
 </body>
 </html>
