@@ -214,7 +214,7 @@
         }
 
         .experience-item {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.75rem;
         }
 
         .experience-item:last-child {
@@ -241,7 +241,7 @@
         }
 
         .experience-item li {
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.4rem;
             font-size: 0.95rem;
         }
 
@@ -379,6 +379,22 @@
                     <li id="exp-li-1">Conducted factor research and evaluated startup financial metrics using valuation frameworks like P/FCF and EV/EBITDA.</li>
                 </ul>
             </div>
+
+            <div class="experience-item" style="margin-top: 1.5rem; border-top: 1px solid #f1f5f9; padding-top: 1.5rem;">
+                <h3 id="exp-title-2">Student Representative</h3>
+                <div class="experience-meta">University of Glasgow</div>
+                <ul>
+                    <li id="exp-li-2">Represented student interests, gathered feedback on academic delivery, and collaborated with faculty to enhance department communication and curriculum support.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item" style="margin-top: 1.5rem; border-top: 1px solid #f1f5f9; padding-top: 1.5rem;">
+                <h3 id="exp-title-3">Statistical Consultant / Peer Study Assistant</h3>
+                <div class="experience-meta">University of Glasgow</div>
+                <ul>
+                    <li id="exp-li-3">Assisted peers with statistical modeling, data cleaning in R/Python, and interpretation of quantitative analyses for academic projects.</li>
+                </ul>
+            </div>
         </div>
 
         <div class="card">
@@ -474,6 +490,10 @@
                 expHeading: "Experience",
                 expTitle1: "Investment Analyst Intern",
                 expLi1: "Conducted factor research and evaluated startup financial metrics using valuation frameworks like P/FCF and EV/EBITDA.",
+                expTitle2: "Student Representative",
+                expLi2: "Represented student interests, gathered feedback on academic delivery, and collaborated with faculty to enhance department communication and curriculum support.",
+                expTitle3: "Statistical Consultant / Peer Study Assistant",
+                expLi3: "Assisted peers with statistical modeling, data cleaning in R/Python, and interpretation of quantitative analyses for academic projects.",
                 projectsHeading: "Featured Projects",
                 projTitle1: "UAE's Performance Analysis",
                 projDesc1: "A comprehensive macro-level economic analysis tracking UAE's GDP diversification, trade openness, and social development indicators from historical data.",
@@ -519,6 +539,10 @@
                 expHeading: "الخبرات العملية",
                 expTitle1: "متدربة محلل استثماري",
                 expLi1: "أجريت أبحاث العوامل وقيمت المقاييس المالية للشركات الناشئة باستخدام أطر التقييم مثل التدفقات النقدية الحرة والربحية.",
+                expTitle2: "ممثلة الطلاب",
+                expLi2: "مثلّت مصالح الطلاب، وجمعت التعليقات حول التدريس الأكاديمي، وتعاونت مع أعضاء هيئة التدريس لتحسين التواصل داخل القسم ودعم المناهج.",
+                expTitle3: "مستشارة إحصائية / مساعد دراسة للأقران",
+                expLi3: "ساعدت الزملاء في النمذجة الإحصائية، وتنظيف البيانات باستخدام R وPython، وتفسير التحليلات الكمية للمشاريع الأكاديمية.",
                 projectsHeading: "المشاريع المميزة",
                 projTitle1: "تحليل أداء دولة الإمارات",
                 projDesc1: "تحليل اقتصادي شامل على مستوى الاقتصاد الكلي لتتبع تنوع الناتج المحلي الإجمالي لدولة الإمارات والانفتاح التجاري ومؤشرات التنمية الاجتماعية من البيانات التاريخية.",
@@ -583,6 +607,10 @@
             document.getElementById('exp-heading').innerText = t.expHeading;
             document.getElementById('exp-title-1').innerText = t.expTitle1;
             document.getElementById('exp-li-1').innerHTML = t.expLi1;
+            document.getElementById('exp-title-2').innerText = t.expTitle2;
+            document.getElementById('exp-li-2').innerHTML = t.expLi2;
+            document.getElementById('exp-title-3').innerText = t.expTitle3;
+            document.getElementById('exp-li-3').innerHTML = t.expLi3;
 
             document.getElementById('projects-heading').innerText = t.projectsHeading;
             document.getElementById('proj-title-1').innerText = t.projTitle1;
