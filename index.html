@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,7 +81,6 @@
             gap: 0.5rem;
         }
 
-        /* Projects Grid Layout */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -123,10 +121,9 @@
             border-bottom: 1px solid #e2e8f0;
         }
 
-        /* Education Layout */
         .education-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
             margin-top: 1.5rem;
         }
@@ -152,9 +149,20 @@
         }
 
         .edu-content h3 {
-            margin: 0 0 0.5rem 0;
+            margin: 0 0 0.25rem 0;
             color: var(--primary);
             font-size: 1.1rem;
+        }
+
+        .edu-badge {
+            display: inline-block;
+            background: #e0f2fe;
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
         }
 
         .edu-content p {
@@ -170,7 +178,7 @@
             padding: 0.6rem 1.2rem;
             border-radius: 6px;
             text-decoration: none;
-            margin: 1.5rem 1.5rem 1.5rem 1.5rem;
+            margin: 1.5rem;
             font-size: 0.9rem;
             font-weight: 500;
             text-align: center;
@@ -242,15 +250,24 @@
             <p>I bring a top-tier quantitative foundation with a BSc (Hons) Statistics from the University of Glasgow, featuring distinctions in advanced data analysis, enhanced by an advanced modeling exchange at the University of Hong Kong[cite: 1]. Combining technical expertise in data pipelines, predictive analytics, and economic modeling with hands-on investment and financial analysis experience[cite: 1], I am driven to deliver impactful insights within the analyst sector.</p>
         </div>
 
-        <!-- Education Section with Image Placeholders -->
+        <!-- Education Section -->
         <div class="card">
             <h2>Education & Academic Background</h2>
             <div class="education-grid">
                 
                 <div class="edu-card">
-                    <!-- Replace with your university or campus photo file name -->
-                    <img src="glasgow-preview.jpg" alt="University of Glasgow" class="edu-img">
+                    <img src="Choueifat.jpg" alt="The International School of Choueifat - Dubai" class="edu-img">
                     <div class="edu-content">
+                        <span class="edu-badge">High School</span>
+                        <h3>The International School of Choueifat - Dubai</h3>
+                        <p style="margin-top: 0.5rem; color: var(--text-light);">Completed continuous K-12 education and high school grounding in Dubai.</p>
+                    </div>
+                </div>
+
+                <div class="edu-card">
+                    <img src="Glasgow.JPG" alt="University of Glasgow" class="edu-img">
+                    <div class="edu-content">
+                        <span class="edu-badge">Bachelor's</span>
                         <h3>University of Glasgow</h3>
                         <p><strong>BSc (Hons) Statistics</strong>[cite: 1]</p>
                         <p style="margin-top: 0.5rem; color: var(--text-light);">Rigorous training in mathematical statistics, data science pipelines, and quantitative research.</p>
@@ -258,9 +275,9 @@
                 </div>
 
                 <div class="edu-card">
-                    <!-- Replace with your exchange or university photo file name -->
-                    <img src="hku-preview.jpg" alt="University of Hong Kong" class="edu-img">
+                    <img src="HKU.jpg" alt="University of Hong Kong" class="edu-img">
                     <div class="edu-content">
+                        <span class="edu-badge">Faculty Exchange</span>
                         <h3>University of Hong Kong</h3>
                         <p><strong>Advanced Modeling Exchange Program</strong>[cite: 1]</p>
                         <p style="margin-top: 0.5rem; color: var(--text-light);">Specialized coursework focusing on advanced statistical modeling and complex data systems.</p>
@@ -311,7 +328,7 @@
             </div>
         </div>
 
-        <!-- Skills & Background Overview -->
+        <!-- Skills & Experience -->
         <div class="card">
             <h2>Skills & Experience</h2>
             <p><strong>Investment Experience:</strong> Investment Analyst Intern at Zeke Venture Capital (Factor research, P/FCF, EV/EBITDA, startup financial metrics)[cite: 1]</p>
@@ -335,5 +352,3 @@
 
 </body>
 </html>
-
-```
