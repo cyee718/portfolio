@@ -61,7 +61,6 @@
             overflow: hidden;
         }
 
-        /* Background image container updated to dubai.jpg */
         .header-bg {
             position: absolute;
             top: 0;
@@ -76,7 +75,6 @@
             filter: blur(0px);
         }
 
-        /* Dark overlay to ensure text remains perfectly readable over the image */
         .header-overlay {
             position: absolute;
             top: 0;
@@ -447,7 +445,7 @@
                     <div class="edu-content">
                         <span class="edu-badge" id="edu-badge-1">High School</span>
                         <h3 id="edu-title-1">The International School of Choueifat - Dubai</h3>
-                        <p id="edu-desc-1" style="margin-top: 0.5rem; color: var(--text-light);">Head of Academics | AP Scholar with Distinction & Honors.</p>
+                        <p id="edu-desc-1" style="margin-top: 0.5rem; color: var(--text-light);">September 2018 - July 2021 | Head of Academics.</p>
                     </div>
                 </div>
 
@@ -611,6 +609,10 @@
                     title: "The International School of Choueifat - Dubai",
                     content: `
                         <div class="course-category">
+                            <h4>Educational Timeline & Scope</h4>
+                            <p>Completed continuous primary-to-highschool education here from September 2018 to July 2021.</p>
+                        </div>
+                        <div class="course-category">
                             <h4>Leadership & Extracurriculars</h4>
                             <p><strong>Head of Academics:</strong> Led academic initiatives, organized peer support programs, and championed academic excellence across the student body.</p>
                         </div>
@@ -655,6 +657,10 @@
                 highschool: {
                     title: "مدرسة الشويفات الدولية - دبي",
                     content: `
+                        <div class="course-category">
+                            <h4>الجدول الزمني والنطاق التعليمي</h4>
+                            <p>أكملت التعليم المستمر من المرحلة الأساسية حتى الثانوية هنا في الفترة من سبتمبر 2018 إلى يوليو 2021.</p>
+                        </div>
                         <div class="course-category">
                             <h4>القيادة والأنشطة اللاصفية</h4>
                             <p><strong>رئيسة الشؤون الأكاديمية:</strong> قيادة المبادرات الأكاديمية، تنظيم برامج دعم الأقران، وتعزيز التميز الأكاديمي بين الطلاب.</p>
@@ -733,7 +739,7 @@
                 eduInstruction: "* Click on any institution card below to view detailed academic highlights and coursework.",
                 eduBadge1: "High School",
                 eduTitle1: "The International School of Choueifat - Dubai",
-                eduDesc1: "Head of Academics | AP Scholar with Distinction & Honors.",
+                eduDesc1: "September 2018 - July 2021 | Head of Academics.",
                 eduBadge2: "Bachelor's",
                 eduTitle2: "University of Glasgow",
                 eduSub2: "Bachelor of Science in Statistics with Honours",
@@ -791,7 +797,7 @@
                 eduInstruction: "* انقر على أي بطاقة مؤسسة أدناه لعرض أبرز الإنجازات الأكاديمية والمقررات الدراسية بالتفصيل.",
                 eduBadge1: "المدرسة الثانوية",
                 eduTitle1: "مدرسة الشويفات الدولية - دبي",
-                eduDesc1: "رئيسة الشؤون الأكاديمية | عالم AP مع التميز ومع مرتبة الشرف.",
+                eduDesc1: "سبتمبر 2018 - يوليو 2021 | رئيسة الشؤون الأكاديمية.",
                 eduBadge2: "درجة البكالوريوس",
                 eduTitle2: "جامعة غلاسكو",
                 eduSub2: "بكالوريوس علوم في الإحصاء مع مرتبة الشرف",
@@ -906,7 +912,7 @@
             document.getElementById('proj-desc-2').innerHTML = t.projDesc2;
             document.getElementById('proj-btn-2').innerText = t.projBtn2;
 
-            document.getElementById('proj-title-3').innerHTML = t.projTitle3;
+            document.getElementById('proj-title-3').innerText = t.projTitle3;
             document.getElementById('proj-desc-3').innerHTML = t.projDesc3;
             document.getElementById('proj-btn-3').innerText = t.projBtn3;
 
