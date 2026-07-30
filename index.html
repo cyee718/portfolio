@@ -1,1 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siyi Zhu | Statistics & Data Analyst</title>
+    <style>
+        :root {
+            --primary: #1e293b;
+            --accent: #0284c7;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #334155;
+            --text-light: #64748b;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem 3rem;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            margin-bottom: 1.2rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.75rem;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-top: 0.5rem;
+            font-weight: 300;
+        }
+
+        .residency-badge {
+            display: inline-block;
+            background: rgba(2, 132, 199, 0.2);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            margin-top: 0.75rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: -2rem auto 3rem;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.75rem;
+            margin-top: 0;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .project-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background: #fff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        .project-img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .edu-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .edu-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .edu-content {
+            padding: 1.5rem;
+        }
+
+        .edu-content h3 {
+            margin: 0 0 0.25rem 0;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .edu-badge {
+            display: inline-block;
+            background: #e0f2fe;
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+
+        .edu-content p {
+            margin: 0;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            margin: 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-align: center;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #02699c;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .skills-list li {
+            background: #f1f5f9;
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+            background: #fff;
+        }
+
+        .contact-links a {
+            color: var(--accent);
+            text-decoration: none;
+            margin: 0 0.75rem;
+            font-weight: 500;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="profile/Siyi_Zhu_Linkedin_PFP.jpeg" alt="Siyi Zhu" class="profile-img">
+        <h1>Siyi Zhu</h1>
+        <p>BSc (Hons) Statistics Graduate | Data & Financial Analyst</p>
+        <div>
+            <span class="residency-badge">UAE Resident (Family Sponsor)</span>
+        </div>
+        <div class="contact-links" style="margin-top: 1.2rem;">
+            <a href="mailto:siyizhu0718@gmail.com">Email</a> | 
+            <a href="https://www.linkedin.com/in/siyi-z-654089204/" target="_blank">LinkedIn</a> | 
+            <a href="https://github.com/cyee718" target="_blank">GitHub</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="card">
+            <h2>About Me</h2>
+            <p>I bring a solid quantitative foundation with a BSc (Hons) Statistics from the University of Glasgow, featuring distinctions in advanced data analysis, enhanced by an advanced modeling exchange at the University of Hong Kong. As a UAE resident with extensive international background, and combining technical expertise in data pipelines, predictive analytics, and economic modeling with hands-on investment and financial analysis experience, I am driven to deliver impactful insights within the analyst sector.</p>
+        </div>
+
+        <div class="card">
+            <h2>Education & Academic Background</h2>
+            <div class="education-grid">
+                
+                <div class="edu-card">
+                    <img src="profile/Choueifat.JPG" alt="The International School of Choueifat - Dubai" class="edu-img">
+                    <div class="edu-content">
+                        <span class="edu-badge">High School</span>
+                        <h3>The International School of Choueifat - Dubai</h3>
+                        <p style="margin-top: 0.5rem; color: var(--text-light);">Completed continuous primary to high school grounding in Dubai.</p>
+                    </div>
+                </div>
+
+                <div class="edu-card">
+                    <img src="profile/Glasgow.JPG" alt="University of Glasgow" class="edu-img">
+                    <div class="edu-content">
+                        <span class="edu-badge">Bachelor's</span>
+                        <h3>University of Glasgow</h3>
+                        <p><strong>BSc (Hons) Statistics</strong></p>
+                        <p style="margin-top: 0.5rem; color: var(--text-light);">Rigorous training in mathematical statistics, data science pipelines, and quantitative research.</p>
+                    </div>
+                </div>
+
+                <div class="edu-card">
+                    <img src="profile/HKU.jpg" alt="University of Hong Kong" class="edu-img">
+                    <div class="edu-content">
+                        <span class="edu-badge">Faculty Exchange</span>
+                        <h3>University of Hong Kong</h3>
+                        <p><strong>Advanced Modeling Exchange Program</strong></p>
+                        <p style="margin-top: 0.5rem; color: var(--text-light);">Specialized coursework focusing on advanced statistical modeling and complex data systems.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div>
+                        <img src="profile/uaeanalysis.png" alt="UAE Analysis Preview" class="project-img">
+                        <div class="project-content">
+                            <h3>UAE's Performance Analysis</h3>
+                            <p>A comprehensive macro-level economic analysis tracking UAE's GDP diversification, trade openness, and social development indicators from historical data.</p>
+                        </div>
+                    </div>
+                    <a href="https://cyee718.github.io/uae-analysis/" target="_blank" class="btn">View Live Project</a>
+                </div>
+
+                <div class="project-card">
+                    <div>
+                        <img src="profile/ndns-alcohol.png" alt="Dissertation Preview" class="project-img">
+                        <div class="project-content">
+                            <h3>NDNS Alcohol Consumption</h3>
+                            <p>Engineered data pipelines, performed exploratory data analysis, and implemented a two-part Hurdle Model for predictive modeling on large datasets.</p>
+                        </div>
+                    </div>
+                    <a href="https://github.com/cyee718/-Dissertation-Factors-affecting-Alcohol-Intake/blob/main/dissertation.pdf" target="_blank" class="btn">View Dissertation PDF</a>
+                </div>
+
+                <div class="project-card">
+                    <div>
+                        <img src="profile/cumbria.png" alt="Cumbria Poster Preview" class="project-img">
+                        <div class="project-content">
+                            <h3>Cumbria Housing Valuation</h3>
+                            <p>Developed a predictive model for real estate trends by executing an end-to-end data cleaning and feature selection workflow.</p>
+                        </div>
+                    </div>
+                    <a href="https://github.com/cyee718/Housing-Prices-in-Cumbria/blob/main/Cumbria%20Poster.pdf" target="_blank" class="btn">View Cumbria Poster</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Skills & Experience</h2>
+            <p><strong>Investment Experience:</strong> Investment Analyst Intern at Zeke Venture Capital (Factor research, P/FCF, EV/EBITDA, startup financial metrics)</p>
+            <p style="margin-top: 1rem;"><strong>Core Technical Skills:</strong></p>
+            <ul class="skills-list">
+                <li>R</li>
+                <li>Python</li>
+                <li>SAS</li>
+                <li>Excel</li>
+                <li>Data Pipelines</li>
+                <li>Predictive Modeling</li>
+                <li>Financial Analysis</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Siyi Zhu. Built with clean code & hosted via GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
