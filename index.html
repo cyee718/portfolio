@@ -407,6 +407,7 @@
     <div class="lang-switcher-container">
         <select id="langSelect" class="lang-select" onchange="switchLanguage(this.value)">
             <option value="en">English</option>
+            <option value="zh">中文 (简体)</option>
             <option value="ar">العربية (الإمارات)</option>
         </select>
     </div>
@@ -477,7 +478,7 @@
             
             <div class="experience-item">
                 <h3 id="exp-title-1">Content Creator</h3>
-                <div class="experience-meta">University of Glasgow (February 2024 - Present)</div>
+                <div class="experience-meta" id="exp-meta-1">University of Glasgow (February 2024 - Present)</div>
                 <ul>
                     <li id="exp-li-1">Managed and executed live streaming sessions on WeChat, focusing on audience interaction, real-time engagement, and traffic conversion.</li>
                     <li id="exp-li-2">Produced 40+ social media content pieces across student, alumni and internal audiences, increasing engagement by 25% through platform-specific content planning and audience targeting.</li>
@@ -489,7 +490,7 @@
 
             <div class="experience-item">
                 <h3 id="exp-title-2">Fundraising Associate</h3>
-                <div class="experience-meta">University of Glasgow Alumni Services (February 2024 - March 2024)</div>
+                <div class="experience-meta" id="exp-meta-2">University of Glasgow Alumni Services (February 2024 - March 2024)</div>
                 <ul>
                     <li id="exp-li-6">Raised over £35,000 for Scholarship for Women campaign, surpassing internal targets by over 45% and contributing to over 11% towards the entire pool raised for the March Campaign.</li>
                     <li id="exp-li-7">Analysed donation patterns from a dataset of 1,200 alumni using Excel, improving campaign strategies and leading to increased donor engagement and retention.</li>
@@ -500,7 +501,7 @@
 
             <div class="experience-item">
                 <h3 id="exp-title-3">Investment Analyst Intern</h3>
-                <div class="experience-meta">Zeke Venture Capital, Hangzhou (June 2023 - August 2023)</div>
+                <div class="experience-meta" id="exp-meta-3">Zeke Venture Capital, Hangzhou (June 2023 - August 2023)</div>
                 <ul>
                     <li id="exp-li-10">Assist in originations by scheduling pitches, summarising investment memos, supporting due diligence and managing data room collection process for over 15 tech startups.</li>
                     <li id="exp-li-11">Analysed CAGR, CAC, Burn rate and other key metrics contributing to 2 combined equity investment of ¥1,000,000.</li>
@@ -654,6 +655,55 @@
                     `
                 }
             },
+            zh: {
+                highschool: {
+                    title: "迪拜舒威法特国际学校 (ISC Dubai)",
+                    content: `
+                        <div class="course-category">
+                            <h4>教育经历与时间跨度</h4>
+                            <p>于 2009 年 9 月至 2021 年 7 月在此完成从小学至高中的连续完整学业。</p>
+                        </div>
+                        <div class="course-category">
+                            <h4>领导力与课外活动</h4>
+                            <p><strong>学术部长 (Head of Academics)：</strong> 主导学术提升项目，组织同伴学术辅导，并在全校范围内推动学术卓越。</p>
+                        </div>
+                        <div class="course-category">
+                            <h4>学术荣誉与奖项</h4>
+                            <p><strong>AP 杰出学者奖 (AP Scholar with Distinction) 与 AP 荣誉学者奖 (AP Scholar with Honors)：</strong> 在多门 AP 大学预修考试中斩获高分，展现了在大学级 STEM 及分析课程上的过硬学术实力。</p>
+                        </div>
+                    `
+                },
+                glasgow: {
+                    title: "格拉斯哥大学 - 核心修读课程概览",
+                    content: `
+                        <div class="course-category">
+                            <h4>高级统计与数据建模 (Advanced Statistical & Data Modelling)</h4>
+                            <p>高级数据分析 (Advanced Data Analysis)、线性混合模型 (Linear Mixed Models)、空间统计学 (Spatial Statistics)、统计遗传学 (Statistical Genetics)、高级贝叶斯方法 (Advanced Bayesian Methods)、函数型数据分析 (Functional Data Analysis) 及灵活回归模型 (Flexible Regression)。</p>
+                        </div>
+                        <div class="course-category">
+                            <h4>量化方法与应用概率 (Quantitative Methods & Applied Probability)</h4>
+                            <p>概率与统计学原理 (Principles of Probability and Statistics)、概率论 I & II、环境与生态统计学 (Environmental & Ecological Statistics) 及生物统计学 (Biostatistics)。</p>
+                        </div>
+                        <div class="course-category">
+                            <h4>数学与分析基石 (Core Mathematics & Analytical Foundations)</h4>
+                            <p>多变量微积分 (Multivariable Calculus)、线性代数 (Linear Algebra)、数学分析导论 (Introduction to Real Analysis)、群论变换与对称性、力学、数学方法与建模、图论与网络 (Graphs & Networks) 及离散数学专题。</p>
+                        </div>
+                        <div class="course-category">
+                            <h4>财务分析与商业基础 (Financial Analysis & Corporate Foundations)</h4>
+                            <p>商业报告与财务会计导论 (Financial Accounting) 及金融、投资与金融机构导论 (Finance, Investments & Institutions)。</p>
+                        </div>
+                    `
+                },
+                hku: {
+                    title: "香港大学 - 交换学术概览",
+                    content: `
+                        <div class="course-category">
+                            <h4>高级建模与金融统计 (Advanced Modeling & Financial Statistics)</h4>
+                            <p>在院系交换期间完成抽样调查方法 (Sample Survey Methods)、市场风险分析 (Market Risk Analysis)、高级建模 (Advanced Modeling) 及多元数据分析 (Multivariate Data Analysis) 等专业量化课程。</p>
+                        </div>
+                    `
+                }
+            },
             ar: {
                 highschool: {
                     title: "مدرسة الشويفات الدولية - دبي",
@@ -744,24 +794,27 @@
                 eduBadge2: "Bachelor's",
                 eduTitle2: "University of Glasgow",
                 eduSub2: "Bachelor of Science in Statistics with Honours",
-                eduDesc2: "September 2021 - June 2026. Courses with distinction: Biostatistics, Advanced Data Analysis, Engineering and Stochastic Processes.",
+                eduDesc2: "September 2021 - June 2026 | Courses with distinction: Biostatistics, Advanced Data Analysis, Engineering and Stochastic Processes.",
                 eduBadge3: "Faculty Exchange",
                 eduTitle3: "University of Hong Kong",
                 eduSub3: "Advanced Modeling Exchange Program",
-                eduDesc3: "September 2024 - June 2025 with advanced courses in Modelling, Sample Survey Methods, and Market Risk Analysis.",
+                eduDesc3: "September 2024 - June 2025 | Advanced courses in Modelling, Sample Survey Methods, and Market Risk Analysis.",
                 expHeading: "Experience",
                 expTitle1: "Content Creator",
+                expMeta1: "University of Glasgow (February 2024 - Present)",
                 expLi1: "Managed and executed live streaming sessions on WeChat, focusing on audience interaction, real-time engagement, and traffic conversion.",
                 expLi2: "Produced 40+ social media content pieces across student, alumni and internal audiences, increasing engagement by 25% through platform-specific content planning and audience targeting.",
                 expLi3: "Improved reach by 20% and engagement by 30% by analysing social media data by using R and Excel, identifying peak engagement times and optimal content.",
                 expLi4: "Led a student opinion survey project to gather actionable feedback, analysed data and provided recommendations to senior management resulting in an increase of 15% content relevance.",
                 expLi5: "Improved content tracking and post-publication workflow by automating Excel trackers and maintaining an organised filing system, increasing content operations productivity by 15%.",
                 expTitle2: "Fundraising Associate",
+                expMeta2: "University of Glasgow Alumni Services (February 2024 - March 2024)",
                 expLi6: "Raised over £35,000 for Scholarship for Women campaign, surpassing internal targets by over 45% and contributing to over 11% towards the entire pool raised for the March Campaign.",
                 expLi7: "Analysed donation patterns from a dataset of 1,200 alumni using Excel, improving campaign strategies and leading to increased donor engagement and retention.",
                 expLi8: "Compiled daily reports on key statistics such as donor acquisition rate and presented findings to senior management.",
                 expLi9: "Accurately processed payments on internal systems and updated our alumni record abiding GDPR.",
                 expTitle3: "Investment Analyst Intern",
+                expMeta3: "Zeke Venture Capital, Hangzhou (June 2023 - August 2023)",
                 expLi10: "Assist in originations by scheduling pitches, summarising investment memos, supporting due diligence and managing data room collection process for over 15 tech startups.",
                 expLi11: "Analysed CAGR, CAC, Burn rate and other key metrics contributing to 2 combined equity investment of ¥1,000,000.",
                 expLi12: "Conducted factor research on 12 portfolio companies by analyzing P/FCF and EV/EBITDA, identifying key metrics that contribute to alpha generation and long-term performance.",
@@ -784,6 +837,67 @@
                 lang3: "French (DELF B1)",
                 footerText: "© 2026 Siyi Zhu. Built with clean code & hosted via GitHub Pages."
             },
+            zh: {
+                pageTitle: "朱思懿 | 统计与数据分析师",
+                name: "朱思懿 (Siyi Zhu)",
+                subtitle: "格拉斯哥大学统计学荣誉理学士 | 数据与金融分析师",
+                residency: "阿联酋居民 (家庭签证担保)",
+                email: "电子邮箱",
+                linkedin: "领英 (LinkedIn)",
+                github: "GitHub",
+                aboutHeading: "个人简介",
+                aboutText: "拥有格拉斯哥大学统计学（荣誉）理学士扎实的量化分析功底，在生物统计学、高级数据分析以及工程与随机过程等课程中均取得卓越成绩（Distinction），并曾在香港大学进行高级建模交换学习。作为具备多元国际化背景的阿联酋居民，我将数据清洗管道（Data Pipelines）、预测分析与宏观经济建模等技术专长，与投资和财务分析的一线实战经验深度结合，致力于在数据与商业分析领域输出具备深度商业价值的见解。",
+                eduHeading: "教育与学术背景",
+                eduInstruction: "* 点击下方任一院校卡片，即可查看详细学术荣誉与修读课程列表。",
+                eduBadge1: "高中",
+                eduTitle1: "迪拜舒威法特国际学校 (ISC Dubai)",
+                eduDesc1: "2018年9月 - 2021年7月 | 学术部长 (Head of Academics)。",
+                eduBadge2: "本科",
+                eduTitle2: "格拉斯哥大学 (University of Glasgow)",
+                eduSub2: "统计学荣誉理学士 (BSc Hons in Statistics)",
+                eduDesc2: "2021年9月 - 2026年6月。卓越成绩课程：生物统计学、高级数据分析、工程与随机过程。",
+                eduBadge3: "院系交换",
+                eduTitle3: "香港大学 (HKU)",
+                eduSub3: "高级建模学术交换项目",
+                eduDesc3: "2024年9月 - 2025年6月。高级修读课程包括：统计建模、抽样调查方法及市场风险分析。",
+                expHeading: "实践与工作经历",
+                expTitle1: "内容运营与创作者 (Content Creator)",
+                expMeta1: "格拉斯哥大学 (2024年2月 - 至今)",
+                expLi1: "负责并执行微信平台直播活动，专注于受众实时互动、社群沉淀与流量转化。",
+                expLi2: "面向学生、校友及内部受众产出 40 余篇社交媒体内容，通过针对各平台特性的内容规划与受众定位，提升整体互动率达 25%。",
+                expLi3: "利用 R 语言和 Excel 进行社交媒体多维数据分析，精准定位受众活跃峰值时段与高转化内容形式，使触达率提升 20%、互动率提升 30%。",
+                expLi4: "主导学生意见调研项目，清洗并分析多维度反馈数据，向管理层提出可落地的改进建议，使内容相关度提升 15%。",
+                expLi5: "通过搭建自动化 Excel 数据看板并建立标准化归档流程，优化内容追踪与发布后管理工作流，使内容运营生产力提升 15%。",
+                expTitle2: "校友筹款助理 (Fundraising Associate)",
+                expMeta2: "格拉斯哥大学校友服务处 (2024年2月 - 2024年3月)",
+                expLi6: "为“女性学者奖学金”筹款活动募集超过 35,000 英镑，超额 45% 完成预期目标，贡献了三月筹款总额的 11% 以上。",
+                expLi7: "运用 Excel 深度分析 1,200 名校友的历史捐赠行为与偏好，助力优化筹款策略，显著提高捐赠人粘性与留存率。",
+                expLi8: "汇总每日关键指标（如捐赠人转化率等），撰写分析报告并向高级管理层汇报复盘。",
+                expLi9: "在内部系统中准确处理捐赠款项并更新校友数据库，全程严格遵循欧盟通用数据保护条例 (GDPR)。",
+                expTitle3: "投资分析师实习生 (Investment Analyst Intern)",
+                expMeta3: "泽科创投，杭州 (2023年6月 - 2023年8月)",
+                expLi10: "协助项目初筛与立项，安排路演排期，撰写投资备忘录，支持尽职调查并主导管理 15+ 家科技初创企业的数据室 (Data Room) 收集流程。",
+                expLi11: "深度测算复合年均增长率 (CAGR)、获客成本 (CAC)、资金消耗率 (Burn Rate) 等核心指标，助力促成 2 笔共计 1,000,000 元人民币的股权投资。",
+                expLi12: "对 12 家被投企业展开多因子研究，对比市现率 (P/FCF) 与企业价值倍数 (EV/EBITDA)，提炼出驱动超额收益 (Alpha) 与长期稳健表现的关键指标。",
+                expLi13: "负责季度 LP 报告的核心板块，独立完成基金业绩测算与近期投资摘要，确保报告准时、合规地分发至机构 LP 与主要利益相关方。",
+                projectsHeading: "核心精选项目",
+                projTitle1: "英国国家饮食与营养调查 (NDNS) 酒精摄入量建模分析",
+                projDesc1: "搭建数据清洗管道处理海量 NDNS 调查数据，开展探索性数据分析 (EDA) 并建立两阶段障模型 (Two-part Hurdle Model) 实现高精度预测分析。",
+                projBtn1: "查看毕业论文 (PDF)",
+                projTitle2: "坎布里亚郡 (Cumbria) 房地产估值建模",
+                projDesc2: "构建房价走势预测模型，执行端到端的数据清洗与特征工程筛选流程，输出高价值的房地产市场量化见解。",
+                projBtn2: "查看学术海报 (Poster)",
+                projTitle3: "阿联酋宏观经济与发展指标全景分析",
+                projDesc3: "基于历史大数据对阿联酋进行宏观经济分析，深度追踪 GDP 多元化进程、贸易开放度以及社会发展关键指标演进。",
+                projBtn3: "在线预览项目",
+                skillsHeading: "专业技能与语言能力",
+                skillsSub1: "核心技术技能：",
+                skillsSub2: "语言能力：",
+                lang1: "英语（母语级 / 流利）",
+                lang2: "普通话（母语）",
+                lang3: "法语（DELF B1）",
+                footerText: "© 2026 朱思懿 (Siyi Zhu). 代码精炼规范 · 托管于 GitHub Pages"
+            },
             ar: {
                 pageTitle: "سي اي جو | محللة بيانات وإحصاء",
                 name: "سي اي جو",
@@ -802,24 +916,27 @@
                 eduBadge2: "درجة البكالوريوس",
                 eduTitle2: "جامعة غلاسكو",
                 eduSub2: "بكالوريوس علوم في الإحصاء مع مرتبة الشرف",
-                eduDesc2: "سبتمبر 2021 - يونيو 2026. مقررات بتقدير ممتاز: الإحصاء الحيوي، تحليل البيانات المتقدم، والعمليات الهندسية والاحتمالية.",
+                eduDesc2: "سبتمبر 2021 - يونيو 2026 | مقررات بتقدير ممتاز: الإحصاء الحيوي، تحليل البيانات المتقدم، والعمليات الهندسية والاحتمالية.",
                 eduBadge3: "تبادل أكاديمي",
                 eduTitle3: "جامعة هونغ كونغ",
                 eduSub3: "برنامج تبادل النمذجة المتقدمة",
-                eduDesc3: "سبتمبر 2024 - يونيو 2025 مع مقررات متقدمة في النمذجة، طرق المسح بالعينة، وتحليل مخاطر السوق.",
+                eduDesc3: "سبتمبر 2024 - يونيو 2025 | مع مقررات متقدمة في النمذجة، طرق المسح بالعينة، وتحليل مخاطر السوق.",
                 expHeading: "الخبرات العملية",
                 expTitle1: "منشئة محتوى",
+                expMeta1: "جامعة غلاسكو (فبراير 2024 - حتى الآن)",
                 expLi1: "إدارة وتنفيذ جلسات البث المباشر على WeChat، مع التركيز على تفاعل الجمهور، التفاعل الفوري، وتحويل حركة المرور.",
                 expLi2: "إنتاج أكثر من 40 قطعة محتوى على وسائل التواصل الاجتماعي عبر جماهير الطلاب والخريجين والجماهير الداخلية، وزيادة التفاعل بنسبة 25% من خلال تخطيط المحتوى المخصص للمنصات واستصداف الجمهور.",
                 expLi3: "تحسين الوصول بنسبة 20% والتفاعل بنسبة 30% من خلال تحليل بيانات وسائل التواصل الاجتماعي باستخدام R وExcel، وتحديد أوقات الذروة للتفاعل والمحتوى الأمثل.",
                 expLi4: "قيادة مشروع استطلاع رأي الطلاب لجمع ملاحظات قابلة للتنفيذ، وتحليل البيانات وتقديم توصيات للإدارة العليا مما أدى إلى زيادة بنسبة 15% في ملاءمة المحتوى.",
                 expLi5: "تحسين تتبع المحتوى وسیر عمل ما بعد النشر من خلال أتمتة متتبعات Excel والحفاظ على نظام حفظ منظم، مما أدى إلى زيادة إنتاجية عمليات المحتوى بنسبة 15%.",
                 expTitle2: "مساعد جمع تبرعات",
+                expMeta2: "خدمات خريجي جامعة غلاسكو (فبراير 2024 - مارس 2024)",
                 expLi6: "جمع أكثر من 35,000 جنيه إسترليني لحملة منحة النساء، متجاوزاً الأهداف الداخلية بأكثر من 45% ومساهمة بأكثر من 11% نحو إجمالي المبلغ المجمع لحملة مارس.",
                 expLi7: "تحليل أنماط التبرع من مجموعة بيانات لـ 1,200 خريج باستخدام Excel، مما أدى إلى تحسين استراتيجيات الحملة وزيادة تفاعل الجهات المانحة والاحتفاظ بهم.",
                 expLi8: "جمع تقارير يومية عن الإحصاءات الرئيسية مثل معدل اكتساب الجهات المانحة وتقديم النتائج إلى الإدارة العليا.",
                 expLi9: "معالجة المدفوعات بدقة على الأنظمة الداخلية وتحديث سجل الخريجين مع الالتزام بقواعد حماية البيانات العامة (GDPR).",
                 expTitle3: "متدرب محلل استثماري",
+                expMeta3: "زيك فينتشر كابيتال، هانغتشو (يونيو 2023 - أغسطس 2023)",
                 expLi10: "المساعدة في عمليات التأسيس من خلال جدول العروض، تلخيص مذكرة الاستثمار، دعم العناية الواجبة وإدارة عملية جمع غرف البيانات لأكثر من 15 شركة ناشئة في قطاع التكنولوجيا.",
                 expLi11: "تحليل معدل النمو السنوي المركب (CAGR)، تكلفة اكتساب العملاء (CAC)، معدل حرق النقود وغيرها من المقاييس الرئيسية المساهمة في استثمار حقوق ملكية مشتركة بقيمة 1,000,000 يوان صيني.",
                 expLi12: "إجراء أبحاث العوامل على 12 شركة محفظة من خلال تحليل P/FCF و EV/EBITDA، وتحديد المقاييس الأساسية التي تساهم في توليد الألفا والأداء على المدى الطويل.",
@@ -852,6 +969,9 @@
             if (lang === 'ar') {
                 htmlRoot.setAttribute('dir', 'rtl');
                 htmlRoot.setAttribute('lang', 'ar');
+            } else if (lang === 'zh') {
+                htmlRoot.setAttribute('dir', 'ltr');
+                htmlRoot.setAttribute('lang', 'zh-CN');
             } else {
                 htmlRoot.setAttribute('dir', 'ltr');
                 htmlRoot.setAttribute('lang', 'en');
@@ -886,6 +1006,7 @@
 
             document.getElementById('exp-heading').innerText = t.expHeading;
             document.getElementById('exp-title-1').innerHTML = t.expTitle1;
+            document.getElementById('exp-meta-1').innerText = t.expMeta1;
             document.getElementById('exp-li-1').innerHTML = t.expLi1;
             document.getElementById('exp-li-2').innerHTML = t.expLi2;
             document.getElementById('exp-li-3').innerHTML = t.expLi3;
@@ -893,12 +1014,14 @@
             document.getElementById('exp-li-5').innerHTML = t.expLi5;
 
             document.getElementById('exp-title-2').innerHTML = t.expTitle2;
+            document.getElementById('exp-meta-2').innerText = t.expMeta2;
             document.getElementById('exp-li-6').innerHTML = t.expLi6;
             document.getElementById('exp-li-7').innerHTML = t.expLi7;
             document.getElementById('exp-li-8').innerHTML = t.expLi8;
             document.getElementById('exp-li-9').innerHTML = t.expLi9;
 
             document.getElementById('exp-title-3').innerHTML = t.expTitle3;
+            document.getElementById('exp-meta-3').innerText = t.expMeta3;
             document.getElementById('exp-li-10').innerHTML = t.expLi10;
             document.getElementById('exp-li-11').innerHTML = t.expLi11;
             document.getElementById('exp-li-12').innerHTML = t.expLi12;
